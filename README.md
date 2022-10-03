@@ -17,7 +17,7 @@ Esta es la práctica #1 de Lenguajes de programación, enfocada en listas enlaza
 
 ## Integrantes de la práctica
 **- Kevin Quiroz Gonzalez**
-`
+ 
 ## Compilador
 Esta práctica fue realizada en **Replit.com** junto a su compilador integrado **Clang++ Versión 7.0.0-3**
 
