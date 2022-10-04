@@ -22,4 +22,4 @@ Esta es la práctica #1 de Lenguajes de programación, enfocada en listas enlaza
 Esta práctica fue realizada en **Replit.com** junto a su compilador integrado **Clang++ Versión 7.0.0-3**
 
 ## Vídeo sustentación
-**https://youtu.be/Arag_mN7ZE0**
+**https://youtu.be/v1zekL-_Ab0**
