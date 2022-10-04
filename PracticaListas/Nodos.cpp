@@ -152,20 +152,17 @@ void Nodos_Repetidos(nodo *cabeza) {
 }
 
 void Eliminar_Repetidos(nodo *&lista) {
-  nodo *actual = new nodo();
-  actual = lista;
-  nodo *siguiente = new nodo();
-  siguiente = actual->siguiente;
-  while (actual != NULL) {
-    while (siguiente != NULL) {
-      if (actual->dato == siguiente->dato) {
-        Eliminar_Nodos(&lista, siguiente->dato);
-      }
-      siguiente = siguiente->siguiente;
+    nodo *actual = lista;
+    while(actual != NULL) {
+        nodo *siguiente = actual->siguiente;
+        while(siguiente != NULL && siguiente->dato == actual->dato) {
+            nodo *aux = siguiente;
+            siguiente = siguiente->siguiente;
+            delete aux;
+        }
+        actual->siguiente = siguiente;
+        actual = siguiente;
     }
-    actual = actual->siguiente;
-    siguiente = actual->siguiente;
-  }
 }
 
 void Invertir_Lista(nodo *cabeza) {
