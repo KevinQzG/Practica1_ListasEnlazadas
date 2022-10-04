@@ -136,19 +136,19 @@ void Calcular_Menor(nodo *cabeza) {
 }
 
 void Nodos_Repetidos(nodo *cabeza) {
-  while (cabeza->siguiente != NULL) {
-    nodo *lista = cabeza->siguiente;
-    while (lista != NULL) {
-      if (cabeza->dato == lista->dato) {
-        cout << lista->dato << "\n";
-      }
-      lista = lista->siguiente;
+    for (nodo *i = cabeza; i != NULL; i = i->siguiente) {
+        int contador = 0;
+        for (nodo *j = cabeza; j != NULL; j = j->siguiente) {
+            if (i->dato == j->dato) {
+                contador++;
+            }
+        }
+        if (contador > 1) {
+            cout << "El elemento " << i->dato << " se repite " << contador << " veces\n" << endl;
+        } else {
+            cout << "No se repiten elementos en esta lista\n" << endl;
+        }
     }
-    cabeza = cabeza->siguiente;
-    if (cabeza->siguiente == NULL) {
-      cout << "No hay elementos repetidos en la lista \n";
-    }
-  }
 }
 
 void Eliminar_Repetidos(nodo *&lista) {
