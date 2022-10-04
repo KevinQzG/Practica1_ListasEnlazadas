@@ -1,5 +1,6 @@
 #ifndef NODOS_H
 #define NODOS_H
+using namespace std;
 
 struct nodo {
   int dato;
